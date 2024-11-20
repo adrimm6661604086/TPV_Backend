@@ -1,4 +1,4 @@
-const { processPayment } = require('../services/paymentService');
+import processPayment from '../services/paymentService';
 
 const initiatePayment = async (req, res) => {
     try {
@@ -10,4 +10,4 @@ const initiatePayment = async (req, res) => {
     }
 };
 
-module.exports = { initiatePayment };
+export default { initiatePayment };

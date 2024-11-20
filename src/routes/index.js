@@ -1,9 +1,14 @@
-const express = require('express');
-const { initiatePayment } = require('../controllers/paymentController');
-const { validatePayment } = require('../middlewares/validateRequest');
+import express from 'express';
 
 const router = express.Router();
 
-router.post('/pay', validatePayment, initiatePayment);
+router.get('/', (req, res) => {
+    res.json({ message: '¡Bienvenido a la API de TPVVirtual!' });
+});
 
-module.exports = router;
+router.get('/pay', (req, res) => {
+    res.json({ message: 'PAGAMEEE!' });
+});
+
+
+export default router;

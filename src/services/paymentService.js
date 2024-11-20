@@ -1,9 +1,9 @@
-const axios = require('axios');
-const { BANK_API_URL, BANK_API_KEY } = require('../config');
+import { post } from 'axios';
+import { BANK_API_URL, BANK_API_KEY } from '../config';
 
 const processPayment = async (paymentDetails) => {
     try {
-        const response = await axios.post(
+        const response = await post(
             `${BANK_API_URL}/payments`,
             paymentDetails,
             { headers: { Authorization: `Bearer ${BANK_API_KEY}` } }
@@ -15,4 +15,4 @@ const processPayment = async (paymentDetails) => {
     }
 };
 
-module.exports = { processPayment };
+export default { processPayment };
