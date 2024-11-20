@@ -1,10 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const paymentRoutes = require('./routes/index.js');
+import express from 'express';
+import { PORT } from './config.js';
+import router from './routes/index.js';
 
 const app = express();
 
-app.use(bodyParser.json());
-app.use('/api', paymentRoutes);
+app.use(express.json());
 
-module.exports = app;
+app.use('/api', router);
+
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
+
+export default app;
