@@ -1,3 +1,3 @@
 node_modules/
 .env
-src/utils/db
+src/utils/db/sql
