@@ -1,16 +1,16 @@
+// Libraries
 import express from 'express';
+
+// Controllers
+import UserController from '../controllers/UserController.js';
+
 
 const router = express.Router();
 
-// Crear un nuevo usuario
-router.post('/new-user', (req, res) => {
-  try {
-    const user = UserController.createUser(req.body);
-    res.status(201).json(user);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+router.post('/register-user', UserController.registerUser);
+
+router.post('/login-user', UserController.loginUser);
+
 
 router.get('/:id', (req, res) => {
   try {
