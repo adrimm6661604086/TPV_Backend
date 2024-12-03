@@ -1,5 +1,6 @@
 // Libraries
 import express from 'express';
+import cors from 'cors';
 
 // Utils
 import router from './routes/index.js';
@@ -9,6 +10,7 @@ import { connectDb } from './db.js';
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use('/api', router);
 
 const startServer = async () => {
