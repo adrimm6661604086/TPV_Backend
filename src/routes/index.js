@@ -12,12 +12,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/pay', (req, res) => {
-    res.json({ message: 'PAGAMEEE!' });
+    res.json({ message: 'Estelita te quiero mucho!' });
 });
 
 router.use('/user', userRoutes);
-router.use('/account', accountRoutes);
-router.use('/transactions', transactionRoutes);
+// router.use('/account', accountRoutes);
+// router.use('/transactions', transactionRoutes);
 
 
 
