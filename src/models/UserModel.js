@@ -5,7 +5,7 @@ import bcrypt from 'bcrypt';
 
 
 // Utils
-import logger from '../config/logger.js';
+import logger from '../logger.js';
 import { db } from '../db.js';
 
 /**
@@ -49,7 +49,7 @@ class UserModel extends Model {
      * @param {string} password
      * @returns {string} - Contraseña encriptada.
      */
-    hashPassword(password) {
+    static async hashPassword(password) {
       return bcrypt.hashSync(password, 10);
     }
 
@@ -59,7 +59,7 @@ class UserModel extends Model {
      * @param {string} encryptedPassword
      * @returns {boolean}
      */
-    comparePasswords(plainPassword, encryptedPassword) {
+    static async comparePasswords(plainPassword, encryptedPassword) {
       return bcrypt.compare(plainPassword, encryptedPassword);
     }
 
@@ -123,12 +123,12 @@ UserModel.init(
     },
   },
   {
-    db, 
+    sequelize: db, 
     modelName: 'User',
     tableName: 'User',
   }
 );
 
-sequelize.sync();
+db.sync();
 
 export default UserModel;
