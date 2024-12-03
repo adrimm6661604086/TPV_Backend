@@ -2,11 +2,11 @@
 import jwt from 'jsonwebtoken';
 
 // Model
-import UserModel from '../models/User.js';
+import UserModel from '../models/UserModel.js';
 
 // Utils
-import logger from '../config/logger.js';
-import config from '../config.js';
+import logger from '../logger.js';
+import { JWT_SECRET } from '../config.js';
 
 
 class UserController {
@@ -18,7 +18,7 @@ class UserController {
    * @throws {Error} - Si el usuario ya existe.
    */
   static async registerUser(req, res) {
-    const { name, last_name, email, password, DNI, phone_number, address, postal_code, city, country } = req.body;
+    const { name, lastName, email, password, DNI, phoneNumber, address, postalCode, city, country } = req.body;
   
     const oldUser = await UserModel.findOne({ where: { email } });
     if (oldUser) {
@@ -26,18 +26,18 @@ class UserController {
       return res.status(400).json({ message: 'El usuario ya existe' });
     }
 
-    const encryptedPassword = await UserModel.hashPassword(password); 
+    const hashedPassword = await UserModel.hashPassword(password); 
     
     try {
       const newUser = await UserModel.create({
         name,
-        last_name,
+        lastName,
         email,
         password: hashedPassword,
         DNI,
-        phone_number,
+        phoneNumber,
         address,
-        postal_code,
+        postalCode,
         city,
         country
       });
@@ -75,7 +75,7 @@ class UserController {
 
       const token = jwt.sign(
         { id: user.id, email: user.email }, 
-        config.JWT_SECRET,              
+        JWT_SECRET,              
         { expiresIn: '1h' }                 
       );
       
