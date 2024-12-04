@@ -1,0 +1,39 @@
+static async loginUser = (req, res) => {
+    try {
+      const { email, password } = req.body;
+    
+      const user = await UserModel.findOne({ where: { email } });
+      if (!user) {
+        logger.error('El usuario no existe');
+        return res.status(404).json({ message: 'El usuario no existe' });
+      }
+      
+      const isPasswordValid = UserModel.comparePasswords(password, user.password);
+      if (!isPasswordValid) {
+        logger.error('Contraseña incorrecta');
+        return res.status(400).json({ message: 'Contraseña incorrecta' });
+      }
+      logger.info('Credenciales de usuario válidas');
+
+      const otp = generateOTP();
+      console.log(otp);
+      await sendEmail(email, otp);
+
+      const userResponse = { ...user.toJSON() };
+      delete userResponse.password;
+
+      res.status(200).json({ 
+        status: 200,
+        message: 'Código OTP enviado correctamente',
+        user: userResponse,
+      });
+     
+    } catch (error) {
+      logger.error(`Error al loguear el usuario: ${error.message}`);
+      return res.status(500).json({ 
+        status: 500,
+        message: 'Error interno del servidor', 
+        error: error.message 
+      });
+    }
+  }
