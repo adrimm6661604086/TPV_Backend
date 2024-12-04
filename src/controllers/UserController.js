@@ -1,11 +1,13 @@
-// Libraries
-import jwt from 'jsonwebtoken';
-
 // Model
 import UserModel from '../models/UserModel.js';
 
 // Utils
 import logger from '../logger.js';
+
+// Libraries
+import jwt from 'jsonwebtoken';
+
+// Utils
 import { JWT_SECRET } from '../config.js';
 
 
@@ -43,10 +45,17 @@ class UserController {
       });
 
       logger.info('Usuario creado correctamente');
-      return res.status(201).json({ message: 'Usuario creado correctamente', user: newUser });
+      return res.status(201).json({ 
+        status: 201,
+        message: 'Usuario creado correctamente'
+      });
     } catch (error) {
       logger.error(`Error al crear el usuario: ${error.message}`);
-      return res.status(500).json({ message: 'Error interno del servidor', error: error.message });
+      return res.status(500).json({ 
+        status: 500,
+        message: 'Error interno del servidor', 
+        error: error.message 
+      });
     } 
   };
 
@@ -67,30 +76,72 @@ class UserController {
         return res.status(404).json({ message: 'El usuario no existe' });
       }
       
-      const isPasswordValid = await UserModel.comparePasswords(password, user.password);
+      const isPasswordValid = UserModel.comparePasswords(password, user.password);
       if (!isPasswordValid) {
         logger.error('Contraseña incorrecta');
         return res.status(400).json({ message: 'Contraseña incorrecta' });
       }
+      logger.info('Credenciales de usuario válidas');
+
+      // const otp = generateOTP();
+      // console.log(otp);
+      // await sendEmail(email, otp);
 
       const token = jwt.sign(
         { id: user.id, email: user.email }, 
         JWT_SECRET,              
         { expiresIn: '1h' }                 
       );
-      
-      const userResponse = { ...user.toJSON() };
-      delete userResponse.password;
 
-      logger.info('Usuario logueado correctamente');
-      return res.json({ 
-        message: 'Usuario logueado correctamente', 
-        user: userResponse, 
+      const { id, userPassword, createdAt, ...userResponse } = user.toJSON();
+
+      res.status(200).json({ 
+        status: 200,
+        message: 'Código OTP enviado correctamente',
+        // user: userResponse,
         token: token
       });
+     
     } catch (error) {
       logger.error(`Error al loguear el usuario: ${error.message}`);
-      return res.status(500).json({ message: 'Error interno del servidor', error: error.message });
+      return res.status(500).json({ 
+        status: 500,
+        message: 'Error interno del servidor', 
+        error: error.message 
+      });
+    }
+  }
+
+  /**
+   * Obtiene la información de un usuario.
+   * @param {Object} - Datos del usuario.
+   * @returns {Object} - Información del usuario.
+   * @throws {Error} - Si el usuario no existe.
+   */
+  static async getUserInfo(req, res) {
+    try {
+      const { email } = req.body;
+      const user = await UserModel.findOne({ where: { email } });
+      
+      if (!user) {
+        logger.error('El usuario no existe');
+        return res.status(404).json({ message: 'El usuario no existe' });
+      }
+
+      logger.info('Usuario encontrado');
+      const { id, password, createdAt, ...userResponse } = user.toJSON();
+
+      return res.status(200).json({ 
+        status: 200,
+        message: 'Información del usuario obtenida correctamente',
+        user: userResponse });
+    } catch (error) {
+      logger.error(`Error al obtener la información del usuario: ${error.message}`);
+      return res.status(500).json({ 
+        status: 500,
+        message: 'Error interno del servidor', 
+        error: error.message 
+      });
     }
   }
 }
