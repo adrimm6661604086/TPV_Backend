@@ -1,3 +1,8 @@
 node_modules/
 .env
 src/utils/db/sql
+
+# logs
+logs/
+logs/combined.log
+logs/error.log
