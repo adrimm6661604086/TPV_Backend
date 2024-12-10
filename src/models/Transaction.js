@@ -1,7 +1,15 @@
+// Libraries
+import { DataTypes, Model } from 'sequelize';
+import bcrypt from 'bcrypt';
+
+// Utils
+import { db } from '../db.js';
+
+
 /**
  * Modelo de Transaction.
  */
-export default class Transaction {
+class TransactionModel {
     /**
      * @param {string} id - UUID de la transacción.
      * @param {string} userAccountId - ID de la cuenta de usuario asociada.
@@ -14,28 +22,80 @@ export default class Transaction {
      * @param {'PAYMENT' | 'WITHDRAWAL' | 'RETURN'} transactionType - Tipo de transacción.
      * @param {'BankSim' | 'BBVA' | 'Caixabank' | 'Santander'} bankEntity - Entidad bancaria.
      */
-    constructor({
-      id,
-      userAccountId,
-      creditCardNumber,
-      creditCardHolder,
-      expirationDate,
-      cvc,
-      amount,
-      transactionDate = new Date(),
-      transactionType,
-      bankEntity,
-    }) {
-      this.id = id;
-      this.userAccountId = userAccountId;
-      this.creditCardNumber = creditCardNumber;
-      this.creditCardHolder = creditCardHolder;
-      this.expirationDate = expirationDate;
-      this.cvc = cvc;
-      this.amount = amount;
-      this.transactionDate = transactionDate;
-      this.transactionType = transactionType;
-      this.bankEntity = bankEntity;
-    }
+    static async createTransaction({ userAccountId, creditCardNumber, creditCardHolder, expirationDate, cvc, amount, transactionType, bankEntity }) {
+      const transaction = await this.create({
+          userAccountId,
+          creditCardNumber,
+          creditCardHolder,
+          expirationDate,
+          cvc,
+          amount,
+          transactionDate: new Date(),
+          transactionType,
+          bankEntity
+      });
+      return transaction;
+    } 
   }
   
+TransactionModel.init(
+  {
+    id: {
+      type: DataTypes.UUID,
+      primaryKey: true,
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+    },
+    userAccountId: {
+      type: DataTypes.UUID,
+      allowNull: false,
+    },
+    creditCardNumber: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    creditCardHolder: {
+      type: DataTypes.ENUM('Visa', 'MasterCard', 'AmericanExpress'),
+      allowNull: false,
+    },
+    expirationDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    cvc: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    amount: {
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: false,
+    },
+    transactionDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    transactionType: {
+      type: DataTypes.ENUM('PAYMENT', 'WITHDRAWAL', 'RETURN'),
+      allowNull: false,
+    },
+    returned: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
+    bankEntity: {
+      type: DataTypes.ENUM('BankSim', 'BBVA', 'Caixabank', 'Santander'),
+      allowNull: false,
+    },
+  },
+  {
+    sequelize: db,
+    modelName: 'Transaction',
+    timestamps: false,
+  }
+);
+
+db.sync();
+
+export default TransactionModel;
