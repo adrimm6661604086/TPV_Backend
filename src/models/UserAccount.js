@@ -5,8 +5,6 @@ import bcrypt from 'bcrypt';
 // Utils
 import { db } from '../db.js';
 
-
-
 /**
  * Modelo de UserAccount.
  */

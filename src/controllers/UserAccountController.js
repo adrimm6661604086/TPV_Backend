@@ -21,7 +21,7 @@ class UserAccountController {
       
       return newUserAccount;
     } catch (error) {
-      logger.error(error);
+      logger.error(`Error al registrar la cuenta bancaria ${error}`);
       throw error;
     }
   };
@@ -53,10 +53,38 @@ class UserAccountController {
         }
       });
     } catch (error) {
-      logger.error(error);
+      logger.error(`Error al recuperar la cuenta bancaria ${error}`);
       return res.status(500).json({ 
         status: 500,
         message: 'Error al obtener la información de la cuenta bancaria' 
+      });
+    }
+  };
+
+  /**
+   * Actualiza la información de la cuenta bancaria de un usuario.
+   * @param {String} - ID del usuario.
+   * @param {Object} - Datos de la cuenta bancaria.
+   * @returns {Object} - Cuenta bancaria actualizada.
+   */
+  static async updateBankInfo(req, res) {
+    const { userId } = req.body;
+    const { IBAN, bankEntity } = req.body;
+
+    try {
+      const bankAccount = await UserAccount.updateBankInfo({ userId }, { IBAN, bankEntity });
+      if (!bankAccount) {
+        logger.error('No se ha encontrado la cuenta bancaria');
+        return res.status(404).json({ 
+          status: 404,
+          message: 'No se ha encontrado la cuenta bancaria' 
+        });
+      }
+    } catch (error) {
+      logger.error(`Error al actualizar la cuenta bancaria ${error}`);
+      return res.status(500).json({ 
+        status: 500,
+        message: 'Error al actualizar la información de la cuenta bancaria' 
       });
     }
   };
