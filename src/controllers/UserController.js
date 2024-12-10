@@ -24,21 +24,28 @@ class UserController {
    */
   static async registerUser(req, res) {
     const { name, lastName, email, password, DNI, phoneNumber, address, postalCode, city, country } = req.body;
-  
+    
+    if (!name || !lastName || !email || !password 
+      || !DNI || !phoneNumber || !address || !postalCode 
+      || !city || !country) {
+      res.status(400).json({
+        status: 400,
+        message: 'Faltan campos obligatorios'
+      });
+    }
+      
     const oldUser = await UserModel.findOne({ where: { email } });
     if (oldUser) {
       logger.error('El usuario ya existe');
       return res.status(400).json({ message: 'El usuario ya existe' });
     }
-
-    const hashedPassword = await UserModel.hashPassword(password); 
     
     try {
-      const newUser = await UserModel.create({
+      const newUser = await UserModel.createUser({
         name,
         lastName,
         email,
-        password: hashedPassword,
+        password,
         DNI,
         phoneNumber,
         address,

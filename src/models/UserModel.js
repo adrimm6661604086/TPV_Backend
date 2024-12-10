@@ -43,15 +43,6 @@ class UserModel extends Model {
     }
 
     /**
-     * Hash de la contraseña.
-     * @param {string} password
-     * @returns {string} - Contraseña encriptada.
-     */
-    static async hashPassword(password) {
-      return bcrypt.hashSync(password, 10);
-    }
-
-    /**
      * Compara la contraseña encriptada con la contraseña en texto plano.
      * @param {string} plainPassword
      * @param {string} encryptedPassword
