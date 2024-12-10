@@ -1,5 +1,6 @@
 import express from 'express';
 import userRoutes from './UserRoutes.js';
+import accountRoutes from './UserAccountRoutes.js';
 import transactionRoutes from './TransactionRoutes.js';
 import logger from '../logger.js';
 
@@ -16,8 +17,8 @@ router.get('/pay', (req, res) => {
 });
 
 router.use('/user', userRoutes);
-// router.use('/account', accountRoutes);
-// router.use('/transactions', transactionRoutes);
+router.use('/account', accountRoutes);
+router.use('/transactions', transactionRoutes);
 
 
 
