@@ -1,11 +1,9 @@
 // Libraries
-import { v4 as uuidv4 } from 'uuid';
 import { DataTypes, Model } from 'sequelize';
 import bcrypt from 'bcrypt';
 
 
 // Utils
-import logger from '../logger.js';
 import { db } from '../db.js';
 
 /**
@@ -62,8 +60,6 @@ class UserModel extends Model {
     static async comparePasswords(plainPassword, encryptedPassword) {
       return bcrypt.compare(plainPassword, encryptedPassword);
     }
-
-
   }
   
 UserModel.init(
