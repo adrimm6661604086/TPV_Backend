@@ -4,7 +4,7 @@ import accountRoutes from './UserAccountRoutes.js';
 import transactionRoutes from './TransactionRoutes.js';
 import logger from '../logger.js';
 
-
+// api/
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -18,7 +18,8 @@ router.get('/pay', (req, res) => {
 
 router.use('/user', userRoutes);
 router.use('/account', accountRoutes);
-router.use('/transactions', transactionRoutes);
+router.use('/transaction', transactionRoutes);
+router.use('/stats', statsRoutes);
 
 
 
