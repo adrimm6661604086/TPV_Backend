@@ -1,6 +1,9 @@
 // Model
 import UserModel from '../models/UserModel.js';
 
+// Controllers
+import UserAccountController from './UserAccountController.js';
+
 // Utils
 import logger from '../logger.js';
 
@@ -44,6 +47,18 @@ class UserController {
         country
       });
 
+      // Vincular la cuenta bancaria del usuario
+      if (newUser) {
+        const { IBAN, bankEntity } = req.body;
+        
+        const linkedBankAccount = await UserAccountController.registerUserAccount({
+          userId: newUser.id,
+          IBAN,
+          bankEntity
+        });
+        logger.info('Cuenta bancaria vinculada correctamente');
+      }
+
       logger.info('Usuario creado correctamente');
       return res.status(201).json({ 
         status: 201,
@@ -69,17 +84,26 @@ class UserController {
   static async loginUser(req, res) {
     try {
       const { email, password } = req.body;
-    
+      if (!email || !password) {
+        return res.status(400).json({ 
+          status: 400,
+          message: "Email y password requeridas" });
+      }
+
       const user = await UserModel.findOne({ where: { email } });
       if (!user) {
         logger.error('El usuario no existe');
-        return res.status(404).json({ message: 'El usuario no existe' });
+        return res.status(404).json({ 
+          status: 404,
+          message: 'El usuario no existe' });
       }
       
       const isPasswordValid = UserModel.comparePasswords(password, user.password);
       if (!isPasswordValid) {
         logger.error('Contraseña incorrecta');
-        return res.status(400).json({ message: 'Contraseña incorrecta' });
+        return res.status(400).json({ 
+          status: 400,
+          message: 'Contraseña incorrecta' });
       }
       logger.info('Credenciales de usuario válidas');
 
@@ -97,8 +121,8 @@ class UserController {
 
       res.status(200).json({ 
         status: 200,
-        message: 'Código OTP enviado correctamente',
-        // user: userResponse,
+        message: 'Usuario autenticado correctamente',
+        user: userResponse,
         token: token
       });
      
@@ -113,6 +137,34 @@ class UserController {
   }
 
   /**
+   * Verifica el token de un usuario.
+   * @param {Object} - Datos del usuario y el token.
+   * @returns {Object} - Mensaje de éxito o error.
+   * @throws {Error} - Si el token no es provisto.
+   * @throws {Error} - Si el token no es válido.
+   */
+  static verifyToken(req, res, next) {
+    const header = req.header("Authorization") || "";
+    const token = header.split(" ")[1];
+    if (!token) {
+      return res.status(401).json({ 
+        status: 401,
+        message: "Token not provied" 
+      });
+    }
+    try {
+      const payload = jwt.verify(token, secretKey);
+      req.username = payload.username;
+      next();
+    } catch (error) {
+      return res.status(403).json({ 
+        status: 403,
+        message: "Token not valid" 
+      });
+    }
+  }w
+
+  /**
    * Obtiene la información de un usuario.
    * @param {Object} - Datos del usuario.
    * @returns {Object} - Información del usuario.
@@ -120,8 +172,9 @@ class UserController {
    */
   static async getUserInfo(req, res) {
     try {
-      const { email } = req.body;
-      const user = await UserModel.findOne({ where: { email } });
+      // const { email } = req.body;
+      const { id } = req.params;
+      const user = await UserModel.findOne({ where: { id } });
       
       if (!user) {
         logger.error('El usuario no existe');
@@ -129,7 +182,7 @@ class UserController {
       }
 
       logger.info('Usuario encontrado');
-      const { id, password, createdAt, ...userResponse } = user.toJSON();
+      const { password, updatedAt, ...userResponse } = user.toJSON();
 
       return res.status(200).json({ 
         status: 200,
