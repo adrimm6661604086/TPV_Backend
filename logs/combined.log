@@ -18,3 +18,470 @@
 2024-12-03 02:26:10 [[32minfo[39m]: Base de datos sincronizada
 2024-12-03 02:26:16 [[32minfo[39m]: Usuario creado correctamente
 2024-12-03 02:28:56 [[32minfo[39m]: Usuario logueado correctamente
+2024-12-04 01:45:54 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 01:45:55 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 01:57:04 [[32minfo[39m]: Usuario creado correctamente
+2024-12-04 01:58:02 [[31merror[39m]: El usuario ya existe
+2024-12-04 01:59:04 [[32minfo[39m]: Usuario creado correctamente
+2024-12-04 01:59:31 [[32minfo[39m]: Usuario creado correctamente
+2024-12-04 02:00:07 [[32minfo[39m]: Usuario creado correctamente
+2024-12-04 02:00:25 [[31merror[39m]: El usuario ya existe
+2024-12-04 02:00:37 [[32minfo[39m]: Usuario creado correctamente
+2024-12-04 02:01:20 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:01:20 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:01:35 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:01:35 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:03:30 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:03:30 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:03:47 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:03:47 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:04:00 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:04:00 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:04:03 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:04:03 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:04:26 [[31merror[39m]: Error al crear el usuario: string violation: password cannot be an array or an object
+2024-12-04 02:05:05 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:05:05 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:05:12 [[31merror[39m]: Error al crear el usuario: string violation: password cannot be an array or an object
+2024-12-04 02:05:39 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:05:39 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:05:46 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:05:46 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:05:48 [[32minfo[39m]: Usuario creado correctamente
+2024-12-04 02:08:53 [[32minfo[39m]: Usuario creado correctamente
+2024-12-04 02:10:22 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-04 02:10:44 [[31merror[39m]: Error al loguear el usuario: connect ETIMEDOUT 64.233.184.109:465
+2024-12-04 02:11:36 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-04 02:11:36 [[31merror[39m]: Error al loguear el usuario: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-434d526b312sm5564435e9.6 - gsmtp
+2024-12-04 02:12:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:12:38 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:13:09 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:13:09 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:13:20 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-04 02:13:21 [[31merror[39m]: Error al loguear el usuario: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-385dece67dasm14530898f8f.8 - gsmtp
+2024-12-04 02:15:19 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:15:19 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:15:51 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:15:51 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:17:58 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:17:58 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:18:31 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:18:31 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:18:47 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-04 02:20:33 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-04 02:24:59 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-04 02:38:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:38:38 [[32minfo[39m]: Base de datos sincronizada
+2024-12-04 02:38:45 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-04 02:38:45 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:28:00 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:28:01 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:34:44 [[32minfo[39m]: Usuario encontrado
+2024-12-09 11:35:13 [[32minfo[39m]: Usuario encontrado
+2024-12-09 11:35:37 [[32minfo[39m]: Usuario encontrado
+2024-12-09 11:36:12 [[32minfo[39m]: Usuario encontrado
+2024-12-09 11:39:47 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:39:47 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:41:12 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:41:13 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:42:50 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:42:51 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:43:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:43:38 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:44:20 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:44:20 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:45:19 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:45:19 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:45:32 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:45:33 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:45:57 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:45:58 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:46:01 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:46:01 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:48:05 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:48:06 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:50:40 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:50:40 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:50:51 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:50:51 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:50:59 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:50:59 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:51:12 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:51:13 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:51:53 [[31merror[39m]: Error al crear el usuario: string violation: password cannot be an array or an object
+2024-12-09 11:52:20 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:52:21 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:52:22 [[31merror[39m]: Error al crear el usuario: UserAccountModel is not defined
+2024-12-09 11:56:40 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:56:41 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:56:46 [[31merror[39m]: Error al crear el usuario: res is not defined
+2024-12-09 11:57:57 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:57:58 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:58:15 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 11:58:15 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 11:59:18 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 11:59:18 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 11:59:22 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 11:59:22 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:00:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:00:39 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:00:47 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:00:48 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:01:07 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:01:08 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:01:20 [[31merror[39m]: El usuario ya existe
+2024-12-09 12:01:33 [[31merror[39m]: SequelizeValidationError: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:01:33 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:14 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:02:15 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:02:18 [[31merror[39m]: SequelizeValidationError: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:18 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:43 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:02:44 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:02:52 [[32minfo[39m]: IBAN: ES1234123412341234, Entidad Bancaria: undefined
+2024-12-09 12:02:52 [[31merror[39m]: SequelizeValidationError: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:52 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:03:23 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:03:23 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:06:06 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:06:07 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:06:14 [[31merror[39m]: Error al crear el usuario: bankEntity is not defined
+2024-12-09 12:06:33 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:06:34 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:06:37 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:06:37 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:07:03 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:07:04 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:07:17 [[32minfo[39m]: IBAN: ES1234123412341234, Entidad Bancaria: BankSim
+2024-12-09 12:07:17 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:07:17 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:08:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-09 12:08:39 [[32minfo[39m]: Base de datos sincronizada
+2024-12-09 12:08:42 [[32minfo[39m]: IBAN: ES1234123412341234, Entidad Bancaria: BankSim
+2024-12-09 12:08:42 [[32minfo[39m]: Cuenta bancaria vinculada correctamente
+2024-12-09 12:08:42 [[32minfo[39m]: Usuario creado correctamente
+2024-12-10 00:37:18 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:37:18 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:51:40 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:51:40 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:53:09 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:53:10 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:53:12 [[31merror[39m]: Error al crear el usuario: Cannot destructure property 'IBAN' of 'req.body.bankData' as it is undefined.
+2024-12-10 00:53:21 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:53:22 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:53:25 [[31merror[39m]: El usuario ya existe
+2024-12-10 00:53:43 [[32minfo[39m]: IBAN: 1234123412341234, Entidad Bancaria: undefined
+2024-12-10 00:53:43 [[31merror[39m]: notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-10 00:53:43 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-10 00:55:00 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:55:00 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:55:15 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:55:16 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:55:24 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:55:24 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:58:28 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 00:58:28 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 00:58:30 [[32minfo[39m]: Cuenta bancaria vinculada correctamente
+2024-12-10 00:58:30 [[32minfo[39m]: Usuario creado correctamente
+2024-12-10 00:58:51 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-10 01:00:34 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-10 01:00:37 [[31merror[39m]: El usuario no existe
+2024-12-10 01:01:02 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:01:42 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:02:05 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:13:19 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 01:13:20 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 01:14:02 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-10 01:14:09 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:16:21 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:17:50 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-10 01:17:53 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:17:54 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:21:30 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-10 01:21:32 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:21:32 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:21:52 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:21:52 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:22:04 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:22:04 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:22:21 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:22:21 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:30:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 01:30:40 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-10 01:30:40 [[32minfo[39m]: Base de datos sincronizada
+2024-12-10 01:31:53 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-10 01:31:57 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:32:57 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:33:16 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:39:33 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-10 01:39:36 [[32minfo[39m]: Usuario encontrado
+2024-12-10 01:40:43 [[32minfo[39m]: Usuario encontrado
+2024-12-12 16:12:14 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:12:14 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:12:55 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:12:55 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:13:50 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:13:51 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:13:51 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:13:58 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:13:58 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:13:58 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:14:25 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:14:25 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:14:25 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:14:29 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:14:29 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:14:29 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:16:26 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:16:26 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:16:26 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:16:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:16:38 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:16:38 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:27:16 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:27:16 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:27:16 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:27:20 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:27:20 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:27:21 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:31:14 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:31:14 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:31:14 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:31:45 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:31:45 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:31:45 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:31:45 [[31merror[39m]: Error al sincronizar la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:52:28 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:52:28 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:52:28 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'useraccount_ibfk_1' are incompatible.
+2024-12-12 16:52:28 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'useraccount_ibfk_1' are incompatible.
+2024-12-12 16:56:59 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:56:59 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:56:59 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:56:59 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:20 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:57:20 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:57:21 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:21 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:24 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:57:24 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:57:25 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:25 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:58:36 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 16:58:36 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 16:58:37 [[32minfo[39m]: Base de datos sincronizada
+2024-12-12 16:58:48 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 16:58:53 [[32minfo[39m]: Usuario encontrado
+2024-12-12 16:59:23 [[32minfo[39m]: Usuario encontrado
+2024-12-12 16:59:25 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:04:50 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:04:55 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:05:35 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:05:57 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:10:43 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:11:52 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:12:12 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:13:25 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:13:28 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:15:37 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:15:48 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:20:44 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:21:26 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:25:30 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:27:20 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:27:26 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:28:40 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:28:55 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:29:14 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:29:19 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:31:02 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:31:09 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:31:11 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:36:15 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 17:36:27 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:46:27 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:47:24 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:51:57 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:55:32 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:57:05 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:57:08 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:57:22 [[32minfo[39m]: Usuario encontrado
+2024-12-12 17:58:43 [[32minfo[39m]: Usuario encontrado
+2024-12-12 22:21:55 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-12 22:21:55 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-12 22:21:56 [[32minfo[39m]: Base de datos sincronizada
+2024-12-12 22:22:27 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 22:35:50 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-12 22:42:34 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-13 00:37:30 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-13 00:37:30 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-13 00:37:31 [[32minfo[39m]: Base de datos sincronizada
+2024-12-13 00:37:42 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-13 00:57:56 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-13 01:06:40 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-13 01:06:57 [[32minfo[39m]: Usuario encontrado
+2024-12-13 01:07:03 [[32minfo[39m]: Usuario encontrado
+2024-12-13 01:24:25 [[32minfo[39m]: Usuario encontrado
+2024-12-13 01:24:51 [[32minfo[39m]: Usuario encontrado
+2024-12-13 01:31:03 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-13 01:37:17 [[32minfo[39m]: Usuario encontrado
+2024-12-13 01:37:28 [[32minfo[39m]: Usuario encontrado
+2024-12-13 01:37:38 [[32minfo[39m]: Usuario encontrado
+2024-12-16 17:02:29 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-16 17:02:29 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-16 17:02:29 [[32minfo[39m]: Base de datos sincronizada
+2024-12-16 17:02:33 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-16 17:05:18 [[32minfo[39m]: Usuario encontrado
+2024-12-16 17:06:02 [[32minfo[39m]: Usuario encontrado
+2024-12-16 17:10:53 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-16 17:44:49 [[32minfo[39m]: Usuario encontrado
+2024-12-16 17:45:31 [[32minfo[39m]: Usuario encontrado
+2024-12-16 17:48:27 [[32minfo[39m]: Credenciales de usuario válidas
+2024-12-16 18:25:50 [[32minfo[39m]: Usuario encontrado
+2024-12-18 23:04:55 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-18 23:04:55 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-18 23:04:56 [[32minfo[39m]: Base de datos sincronizada
+2024-12-18 23:58:28 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-18 23:58:28 [[32minfo[39m]: Servidor corriendo en http://localhost:5000
+2024-12-18 23:58:29 [[32minfo[39m]: Base de datos sincronizada
+2024-12-20 18:42:11 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:42:29 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:44:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:46:11 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:46:38 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:47:51 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:47:51 [[32minfo[39m]: Servidor corriendo en http://192.168.1.100:5000
+2024-12-20 18:47:51 [[32minfo[39m]: Base de datos sincronizada
+2024-12-20 18:48:06 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:48:20 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:48:26 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:50:08 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:50:08 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-20 18:50:08 [[32minfo[39m]: Base de datos sincronizada
+2024-12-20 18:53:54 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-20 18:53:54 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-20 18:53:55 [[32minfo[39m]: Base de datos sincronizada
+2024-12-24 12:49:37 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 12:49:37 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 12:49:38 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_userId_foreign_idx' are incompatible.
+2024-12-24 12:50:41 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 12:50:41 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 12:50:42 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_userId_foreign_idx' are incompatible.
+2024-12-24 12:52:00 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 12:52:00 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 12:52:00 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:52:55 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 12:52:55 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 12:52:56 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:56:51 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 12:56:51 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 12:56:52 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:57:12 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 12:57:13 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 12:57:13 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:59:23 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 12:59:23 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 12:59:23 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:04 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:07:04 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:07:04 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:14 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:07:14 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:07:14 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:29 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:07:29 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:07:29 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:30 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:07:30 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:07:30 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:52 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:07:52 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:07:52 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:00 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:08:00 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:08:00 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:03 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:08:03 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:08:03 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:12 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:08:12 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:08:13 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:24 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:08:24 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:08:24 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:13:53 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:13:53 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:13:53 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:15:06 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:15:06 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:15:06 [[31merror[39m]: Error sincronizando la base de datos: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UUIDV4 , `userId` UUIDV4 NOT NULL, `stripeBankAccountId` VARCHAR(255) NOT NULL U' at line 1
+2024-12-24 13:15:58 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:15:58 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:15:58 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:16:24 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:16:24 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:16:24 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:16:27 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:16:27 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:16:27 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:16:33 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:16:33 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:16:33 [[31merror[39m]: Error sincronizando la base de datos: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UUIDV4 NOT NULL, `stripeBankAccountId` VARCHAR(255) NOT NULL UNIQUE, `stripeAcco' at line 1
+2024-12-24 13:17:23 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:17:23 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:17:23 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:20:28 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:20:28 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:20:28 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_userId_foreign_idx' are incompatible.
+2024-12-24 13:21:16 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:21:16 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:21:17 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_ibfk_1' are incompatible.
+2024-12-24 13:21:23 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:21:23 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:21:23 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_ibfk_1' are incompatible.
+2024-12-24 13:21:34 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:21:34 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:21:34 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_userId_foreign_idx' are incompatible.
+2024-12-24 13:21:37 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:21:37 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:21:37 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_userId_foreign_idx' are incompatible.
+2024-12-24 13:39:14 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:39:14 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:39:15 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:39:51 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:39:51 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:39:52 [[32minfo[39m]: Base de datos sincronizada
+2024-12-24 13:40:08 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:40:08 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:40:09 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:40:16 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:40:16 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:40:16 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:41:37 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:41:37 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:41:38 [[32minfo[39m]: Base de datos sincronizada
+2024-12-24 13:42:23 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:42:23 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:42:24 [[32minfo[39m]: Base de datos sincronizada
+2024-12-24 13:43:13 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:43:13 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:43:14 [[32minfo[39m]: Base de datos sincronizada
+2024-12-24 13:50:08 [[32minfo[39m]: Conexión a la base de datos MySQL establecida correctamente
+2024-12-24 13:50:08 [[32minfo[39m]: Servidor corriendo en 192.168.1.100:5000
+2024-12-24 13:50:09 [[32minfo[39m]: Base de datos sincronizada

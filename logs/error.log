@@ -1,0 +1,100 @@
+2024-12-04 01:58:02 [[31merror[39m]: El usuario ya existe
+2024-12-04 02:00:25 [[31merror[39m]: El usuario ya existe
+2024-12-04 02:04:26 [[31merror[39m]: Error al crear el usuario: string violation: password cannot be an array or an object
+2024-12-04 02:05:12 [[31merror[39m]: Error al crear el usuario: string violation: password cannot be an array or an object
+2024-12-04 02:10:44 [[31merror[39m]: Error al loguear el usuario: connect ETIMEDOUT 64.233.184.109:465
+2024-12-04 02:11:36 [[31merror[39m]: Error al loguear el usuario: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-434d526b312sm5564435e9.6 - gsmtp
+2024-12-04 02:13:21 [[31merror[39m]: Error al loguear el usuario: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-385dece67dasm14530898f8f.8 - gsmtp
+2024-12-09 11:51:53 [[31merror[39m]: Error al crear el usuario: string violation: password cannot be an array or an object
+2024-12-09 11:52:22 [[31merror[39m]: Error al crear el usuario: UserAccountModel is not defined
+2024-12-09 11:56:46 [[31merror[39m]: Error al crear el usuario: res is not defined
+2024-12-09 11:58:15 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 11:58:15 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 11:59:22 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 11:59:22 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:01:20 [[31merror[39m]: El usuario ya existe
+2024-12-09 12:01:33 [[31merror[39m]: SequelizeValidationError: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:01:33 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:18 [[31merror[39m]: SequelizeValidationError: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:18 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:52 [[31merror[39m]: SequelizeValidationError: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:02:52 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:06:14 [[31merror[39m]: Error al crear el usuario: bankEntity is not defined
+2024-12-09 12:06:37 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:06:37 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:07:17 [[31merror[39m]: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-09 12:07:17 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.IBAN cannot be null,
+notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-10 00:53:12 [[31merror[39m]: Error al crear el usuario: Cannot destructure property 'IBAN' of 'req.body.bankData' as it is undefined.
+2024-12-10 00:53:25 [[31merror[39m]: El usuario ya existe
+2024-12-10 00:53:43 [[31merror[39m]: notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-10 00:53:43 [[31merror[39m]: Error al crear el usuario: notNull Violation: UserAccount.bankEntity cannot be null
+2024-12-10 01:00:37 [[31merror[39m]: El usuario no existe
+2024-12-12 16:12:14 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:12:55 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:13:51 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:13:58 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:14:25 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:14:29 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:16:26 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:16:38 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:27:16 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:27:21 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:31:14 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:31:45 [[31merror[39m]: Error sincronizando la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:31:45 [[31merror[39m]: Error al sincronizar la base de datos: Too many keys specified; max 64 keys allowed
+2024-12-12 16:52:28 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'useraccount_ibfk_1' are incompatible.
+2024-12-12 16:52:28 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'useraccount_ibfk_1' are incompatible.
+2024-12-12 16:56:59 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:56:59 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:21 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:21 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:25 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-12 16:57:25 [[31merror[39m]: Error al sincronizar la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'userbankaccount_ibfk_1' are incompatible.
+2024-12-20 18:42:11 [[31merror[39m]: Error al conectar con la base de datos: PORT is not defined
+2024-12-24 12:49:38 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_userId_foreign_idx' are incompatible.
+2024-12-24 12:50:42 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_userId_foreign_idx' are incompatible.
+2024-12-24 12:52:00 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:52:56 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:56:52 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:57:13 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 12:59:23 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:04 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:14 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:29 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:30 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:07:52 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:00 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:03 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:13 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:08:24 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:13:53 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:15:06 [[31merror[39m]: Error sincronizando la base de datos: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UUIDV4 , `userId` UUIDV4 NOT NULL, `stripeBankAccountId` VARCHAR(255) NOT NULL U' at line 1
+2024-12-24 13:15:58 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:16:24 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:16:27 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:16:33 [[31merror[39m]: Error sincronizando la base de datos: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UUIDV4 NOT NULL, `stripeBankAccountId` VARCHAR(255) NOT NULL UNIQUE, `stripeAcco' at line 1
+2024-12-24 13:17:23 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:20:28 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_userId_foreign_idx' are incompatible.
+2024-12-24 13:21:17 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_ibfk_1' are incompatible.
+2024-12-24 13:21:23 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_account_ibfk_1' are incompatible.
+2024-12-24 13:21:34 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_userId_foreign_idx' are incompatible.
+2024-12-24 13:21:37 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_userId_foreign_idx' are incompatible.
+2024-12-24 13:39:15 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:40:09 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
+2024-12-24 13:40:16 [[31merror[39m]: Error sincronizando la base de datos: Referencing column 'userId' and referenced column 'id' in foreign key constraint 'bank_accounts_ibfk_1' are incompatible.
