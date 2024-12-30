@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+export const BACKEND_URL = process.env.BACKEND_URL;
 export const PORT = process.env.PORT || 5000;
 export const BANK_API_URL = process.env.BANK_API_URL;
 export const BANK_API_KEY = process.env.BANK_API_KEY;

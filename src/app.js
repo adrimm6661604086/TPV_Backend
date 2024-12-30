@@ -4,8 +4,9 @@ import cors from 'cors';
 
 // Utils
 import router from './routes/index.js';
-import { PORT } from './config.js';
+import { PORT, BACKEND_URL } from './config.js';
 import { connectDb } from './db.js'; 
+import logger from './logger.js';
 
 const app = express();
 
@@ -17,12 +18,14 @@ const startServer = async () => {
   try {
     await connectDb();
 
-    app.listen(PORT, () => {
-      console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Servidor corriendo en ${BACKEND_URL}:${PORT}`);
+      logger.info(`Servidor corriendo en ${BACKEND_URL}:${PORT}`);
     });
   } catch (err) {
     console.error('Error al conectar con la base de datos:', err);
-    // process.exit(1); 
+    logger.error('Error al conectar con la base de datos:', err);
+    process.exit(1); 
   }
 };
 
