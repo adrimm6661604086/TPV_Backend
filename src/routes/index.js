@@ -1,7 +1,8 @@
 import express from 'express';
 import userRoutes from './UserRoutes.js';
-import accountRoutes from './UserAccountRoutes.js';
+import accountRoutes from './BankAccountRoutes.js';
 import transactionRoutes from './TransactionRoutes.js';
+import statsRoutes from './StatsRoutes.js';
 import logger from '../logger.js';
 
 // api/
