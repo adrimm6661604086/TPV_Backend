@@ -8,7 +8,7 @@ import { db } from '../db.js';
 /**
  * Modelo de UserAccount.
  */
-class UserAccountModel extends Model {
+class BankAccountModel extends Model {
   /**
    * @param {string} id - UUID de la cuenta.
    * @param {string} userId - ID del usuario asociado.
@@ -28,7 +28,7 @@ class UserAccountModel extends Model {
   } 
 }
 
-UserAccountModel.init({
+BankAccountModel.init({
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
@@ -48,9 +48,10 @@ UserAccountModel.init({
   }
 }, {
   sequelize: db,
-  modelName: 'UserAccount'
+  modelName: 'BankAccount',
+  tableName: 'bankaccounts'
 });
 
 db.sync();
 
-export default UserAccountModel;
+export default BankAccountModel;

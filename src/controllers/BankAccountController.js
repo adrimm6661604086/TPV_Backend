@@ -1,5 +1,5 @@
 // Model
-import UserAccountModel from '../models/UserAccount.js';
+import BankAccountModel from '../models/BankAccountModel.js';
 
 // Utils
 import logger from '../logger.js';
@@ -13,7 +13,7 @@ class UserAccountController {
    */
   static async registerUserAccount({userId, IBAN, bankEntity}) {
     try {
-      const newUserAccount = await UserAccountModel.create({
+      const newUserAccount = await BankAccountModel.create({
         userId,
         IBAN,
         bankEntity
@@ -35,7 +35,7 @@ class UserAccountController {
     const { userId } = req.params;
 
     try {
-      const bankAccount = await UserAccountModel.findOne({ userId });
+      const bankAccount = await BankAccountModel.findOne({ where: { userId } });
       if (!bankAccount) {
         logger.error('No se ha encontrado la cuenta bancaria');
         return res.status(404).json({ 
