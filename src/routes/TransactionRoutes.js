@@ -8,8 +8,7 @@ router.post('/payment', TransactionController.payment);
 
 router.post('/return/:id', TransactionController.returnTransaction);
 
-router.get('/:accountId', TransactionController.getAllTransactions);
-
+router.get('/:accountId', TransactionController.getAllTransactionsFromAccount);
 
 
 export default router;
