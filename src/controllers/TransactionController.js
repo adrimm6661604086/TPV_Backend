@@ -1,5 +1,5 @@
 // Model
-import TransactionModel from '../models/Transaction.js';
+import TransactionModel from '../models/TransactionModel.js';
 
 // Libraries
 import bcrypt from 'bcrypt';
@@ -136,7 +136,7 @@ class TransactionController {
    * @param {id} - ID de la cuenta bancaria.
    * @returns {Object} - Mensaje de éxito
    */
-  static async getAllTransactions(req, res) {
+  static async getAllTransactionsFromAccount(req, res) {
     const { accountId } = req.params;
     
     if (!accountId) {
