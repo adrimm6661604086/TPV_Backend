@@ -9,7 +9,7 @@ import { db } from '../db.js';
 /**
  * Modelo de Transaction.
  */
-class TransactionModel {
+class TransactionModel extends Model {
     /**
      * @param {string} id - UUID de la transacción.
      * @param {string} userAccountId - ID de la cuenta de usuario asociada.
@@ -46,8 +46,13 @@ TransactionModel.init(
       allowNull: false,
       defaultValue: DataTypes.UUIDV4,
     },
-    userAccountId: {
+    bankAccountId: {
       type: DataTypes.UUID,
+      references: {
+        model: 'bankAccounts',
+        tableName: 'bankaccounts',
+        key: 'id',
+      },
       allowNull: false,
     },
     creditCardNumber: {
@@ -55,6 +60,10 @@ TransactionModel.init(
       allowNull: false,
     },
     creditCardHolder: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    CardOrg: {
       type: DataTypes.ENUM('Visa', 'MasterCard', 'AmericanExpress'),
       allowNull: false,
     },
@@ -92,6 +101,7 @@ TransactionModel.init(
   {
     sequelize: db,
     modelName: 'Transaction',
+    tableName: 'transactions',
     timestamps: false,
   }
 );
