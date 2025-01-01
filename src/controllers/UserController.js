@@ -2,7 +2,7 @@
 import UserModel from '../models/UserModel.js';
 
 // Controllers
-import UserAccountController from './UserAccountController.js';
+import UserAccountController from './BankAccountController.js';
 
 // Utils
 import logger from '../logger.js';
@@ -97,7 +97,7 @@ class UserController {
           message: "Email y password requeridas" });
       }
 
-      const user = await UserModel.findOne({ where: { email } });
+      const user = await UserModel.findOne({ email });
       if (!user) {
         logger.error('El usuario no existe');
         return res.status(404).json({ 
@@ -114,17 +114,13 @@ class UserController {
       }
       logger.info('Credenciales de usuario válidas');
 
-      // const otp = generateOTP();
-      // console.log(otp);
-      // await sendEmail(email, otp);
-
       const token = jwt.sign(
         { id: user.id, email: user.email }, 
         JWT_SECRET,              
         { expiresIn: '1h' }                 
       );
 
-      const { id, userPassword, createdAt, ...userResponse } = user.toJSON();
+      const { userPassword, createdAt, ...userResponse } = user.toJSON();
 
       res.status(200).json({ 
         status: 200,
