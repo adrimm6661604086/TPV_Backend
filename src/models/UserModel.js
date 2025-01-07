@@ -71,7 +71,6 @@ UserModel.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         isEmail: true,
       },
@@ -116,6 +115,6 @@ UserModel.init(
   }
 );
 
-db.sync();
+db.sync({alter: true});
 
 export default UserModel;
