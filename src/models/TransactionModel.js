@@ -19,7 +19,7 @@ class TransactionModel extends Model {
      * @param {string} cvc - Código CVC.
      * @param {number} amount - Cantidad de la transacción.
      * @param {Date} [transactionDate] - Fecha de la transacción.
-     * @param {'PAYMENT' | 'WITHDRAWAL' | 'RETURN'} transactionType - Tipo de transacción.
+     * @param {'PAYMENT' | 'RETURN'} transactionType - Tipo de transacción.
      * @param {'BankSim' | 'BBVA' | 'Caixabank' | 'Santander'} bankEntity - Entidad bancaria.
      */
     static async createTransaction({ userAccountId, creditCardNumber, creditCardHolder, expirationDate, cvc, amount, transactionType, bankEntity }) {
@@ -85,7 +85,7 @@ TransactionModel.init(
       defaultValue: DataTypes.NOW,
     },
     transactionType: {
-      type: DataTypes.ENUM('PAYMENT', 'WITHDRAWAL', 'RETURN'),
+      type: DataTypes.ENUM('PAYMENT', 'RETURN'),
       allowNull: false,
     },
     returned: {
