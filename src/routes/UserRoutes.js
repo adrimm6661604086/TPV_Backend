@@ -10,7 +10,7 @@ router.post('/register-user', UserController.registerUser);
 
 router.post('/login-user', UserController.loginUser);
 
-router.post('/verify-auth', UserController.verifyToken, (req, res) => {
+router.get('/verify-auth', UserController.verifyToken, (req, res) => {
     res.status(200).json({ 
         status: 200,
         message: 'Usuario autenticado correctamente' 
