@@ -32,9 +32,16 @@ class UserAccountController {
    * @returns {Object} - Cuenta bancaria.
    */
   static async getAccountInfo(req, res) {
-    const { userId } = req.params;
-
     try {
+      const { userId } = req.params;
+      if (!userId) {
+        logger.error('Falta el ID del usuario');
+        return res.status(400).json({
+          status: 400,
+          message: 'Falta el ID del usuario'
+        });
+      }
+      
       const bankAccount = await BankAccountModel.findOne({ where: { userId } });
       if (!bankAccount) {
         logger.error('No se ha encontrado la cuenta bancaria');
