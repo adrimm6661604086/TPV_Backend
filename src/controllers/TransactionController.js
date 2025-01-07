@@ -1,8 +1,12 @@
 // Model
 import TransactionModel from '../models/TransactionModel.js';
+import BankAccountModel from '../models/BankAccountModel.js';
 
 // Libraries
 import bcrypt from 'bcrypt';
+
+// Logger
+import logger from '../logger.js';
 
 class TransactionController {
   /**
@@ -137,9 +141,9 @@ class TransactionController {
    * @returns {Object} - Mensaje de éxito
    */
   static async getAllTransactionsFromAccount(req, res) {
-    const { accountId } = req.params;
+    const { userId } = req.params;
     
-    if (!accountId) {
+    if (!userId) {
       logger.error('Falta el ID de la cuenta bancaria');
       return res.status(400).json({ 
         status: 400,
@@ -148,7 +152,29 @@ class TransactionController {
     }
 
     try {
-      const transactions = TransactionModel.findAll({ where: { userAccountId: accountId } });
+      const bankAccount = JSON.stringify(await BankAccountModel.findOne({ where: { userId } }));
+      
+      if (!bankAccount) {
+        logger.error('Cuenta bancaria no encontrada');
+        return res.status(404).json({ 
+          status: 404,
+          message: 'Cuenta bancaria no encontrada' 
+        });
+      }
+
+      const bankAccountParsed = JSON.parse(bankAccount);
+      logger.info(`Bank account ID: ${bankAccountParsed.id}`);
+      
+      const transactions = await TransactionModel.findAll({ where: { bankAccountId: bankAccountParsed.id } });
+
+      if (!transactions) {
+        logger.error('No hay transacciones');
+        return res.status(404).json({ 
+          status: 404,
+          message: 'No hay transacciones'
+        });
+      }
+
       logger.info('Transacciones obtenidas con éxito');
       return res.status(200).json({
         status: 200,
