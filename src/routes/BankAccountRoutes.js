@@ -4,7 +4,7 @@ import logger from '../logger.js';
 
 const router = express.Router();
 
-router.get('/:id', UserAccountController.getAccountInfo);
+router.get('/:userId', UserAccountController.getAccountInfo);
 
 router.put('/update-bankinfo', UserAccountController.updateBankInfo);
 
