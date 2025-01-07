@@ -97,7 +97,7 @@ class UserController {
           message: "Email y password requeridas" });
       }
 
-      const user = await UserModel.findOne({ email });
+      const user = await UserModel.findOne({ where: { email } });
       if (!user) {
         logger.error('El usuario no existe');
         return res.status(404).json({ 
@@ -175,7 +175,6 @@ class UserController {
    */
   static async getUserInfo(req, res) {
     try {
-      // const { email } = req.body;
       const { id } = req.params;
       const user = await UserModel.findOne({ where: { id } });
       
