@@ -22,9 +22,9 @@ class TransactionModel extends Model {
      * @param {'PAYMENT' | 'RETURN'} transactionType - Tipo de transacción.
      * @param {'BankSim' | 'BBVA' | 'Caixabank' | 'Santander'} bankEntity - Entidad bancaria.
      */
-    static async createTransaction({ userAccountId, creditCardNumber, creditCardHolder, expirationDate, cvc, amount, transactionType, bankEntity }) {
+    static async createTransaction({ bankAccountId, creditCardNumber, creditCardHolder, expirationDate, cvc, amount, transactionType, bankEntity, CardOrg }) {
       const transaction = await this.create({
-          userAccountId,
+          bankAccountId,
           creditCardNumber,
           creditCardHolder,
           expirationDate,
@@ -32,7 +32,8 @@ class TransactionModel extends Model {
           amount,
           transactionDate: new Date(),
           transactionType,
-          bankEntity
+          bankEntity,
+          CardOrg
       });
       return transaction;
     } 
