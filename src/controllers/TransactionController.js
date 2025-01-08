@@ -8,6 +8,11 @@ import bcrypt from 'bcrypt';
 // Logger
 import logger from '../logger.js';
 
+// Constants
+import {BANK_API_URL} from '../config.js';
+
+
+
 class TransactionController {
   /**
    * Create a transaction after a payment or withdrawal.
@@ -17,11 +22,11 @@ class TransactionController {
    * @throws {Error} - Si la tarjeta ha expirado.
    */
   static async payment(req, res) {
-    const { userAccountId, creditCardNumber, CreditCardHolder, 
-      expirationDate, cvc, amount, bankEntity} = req.body;
+    const { userId, creditCardNumber, creditCardHolder, 
+      expirationDate, cvc, amount, bankEntity, AID} = req.body;
 
-    if (!userAccountId || !creditCardNumber || !CreditCardHolder ||
-      !expirationDate || !cvc || !amount || !bankEntity) {
+    if (!userId || !creditCardNumber || !creditCardHolder ||
+      !expirationDate || !cvc || !amount || !bankEntity || !AID) {
       logger.error('Faltan campos obligatorios');
       return res.status(400).json({ 
         status: 400,
@@ -38,26 +43,70 @@ class TransactionController {
     }
 
     try {
-      const hashCreditCardNumber = await bcrypt.hash(creditCardNumber, 10);
-      const hashCVC = await bcrypt.hash(cvc, 10);
-      const transaction = TransactionModel.createTransaction(
-        {
-          userAccountId,
-          creditCardNumber: hashCreditCardNumber,
-          CreditCardHolder,
-          expirationDate,
-          cvc: hashCVC,
-          amount,
-          transactionType: 'PAYMENT',
-          bankEntity,
+      const bankAccount = await BankAccountModel.findOne({ where: { userId } });
+      if (!bankAccount) {
+        logger.error('Cuenta bancaria no encontrada');
+        return res.status(404).json({
+          status: 404,
+          message: 'Cuenta bancaria no encontrada'
         });
+      }
 
-        logger.info('Transacción creada con éxito');
-        return res.status(201).json({
-          status: 201,
-          message: 'Transacción creada con éxito',
-          transaction,
+      const response = await fetch(`${BANK_API_URL}/process-payment`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          creditCardNumber: creditCardNumber,
+          creditCardHolder: creditCardHolder,
+          expirationDate: expirationDate,
+          CVC: cvc,
+          IBANorig: bankAccount.IBAN,
+          amount: amount
+        }).toString()
+      });
+
+      const responseData = await response.json();
+      logger.info(`Respuesta de la API del banco: ${responseData.message}`);
+
+      if (response.status === 200) {
+        const hashCreditCardNumber = await bcrypt.hash(creditCardNumber, 10);
+        const hashCVC = await bcrypt.hash(cvc, 10);
+        
+        if (['Visa', 'MasterCard', 'AmericanExpress'].includes(AID)) {
+          const transaction = await TransactionModel.createTransaction({
+            bankAccountId: bankAccount.id,
+            creditCardNumber: hashCreditCardNumber,
+            creditCardHolder,
+            expirationDate,
+            cvc: hashCVC,
+            amount,
+            transactionType: 'PAYMENT',
+            bankEntity,
+            CardOrg: AID
+          });
+
+          return res.status(201).json({
+            status: 201,
+            message: 'Transacción creada con éxito',
+            transaction,
+          });
+        } else {
+          logger.error('Tipo de tarjeta no soportado');
+          return res.status(400).json({
+            status: 400,
+            message: 'Tipo de tarjeta no soportado'
+          });
+        }
+      } else {
+        const errorData = await response.json();
+        logger.error(`Error en el pago: ${errorData.message}`);
+        return res.status(response.status).json({
+          status: response.status,
+          message: errorData.message
         });
+      }
     } catch(error) {
       logger.error(`Error al realizar el pago: ${error.message}`);
       return res.status(500).json({ 
