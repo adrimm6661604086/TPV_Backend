@@ -23,10 +23,10 @@ class TransactionController {
    */
   static async payment(req, res) {
     const { userId, creditCardNumber, creditCardHolder, 
-      expirationDate, cvc, amount, bankEntity, AID} = req.body;
+      expirationDate, cvc, amount} = req.body;
 
     if (!userId || !creditCardNumber || !creditCardHolder ||
-      !expirationDate || !cvc || !amount || !bankEntity || !AID) {
+      !expirationDate || !cvc || !amount ) {
       logger.error('Faltan campos obligatorios');
       return res.status(400).json({ 
         status: 400,
@@ -41,6 +41,8 @@ class TransactionController {
         message: 'La tarjeta ha expirado' 
       });
     }
+
+    const AID = getCardOrgFromNumber(creditCardNumber);
 
     try {
       const bankAccount = await BankAccountModel.findOne({ where: { userId } });
@@ -78,12 +80,13 @@ class TransactionController {
           const transaction = await TransactionModel.createTransaction({
             bankAccountId: bankAccount.id,
             creditCardNumber: hashCreditCardNumber,
+            last4Digits: creditCardNumber.slice(-4),
             creditCardHolder,
             expirationDate,
             cvc: hashCVC,
             amount,
             transactionType: 'PAYMENT',
-            bankEntity,
+            bankEntity: 'BankSim',
             CardOrg: AID
           });
 
@@ -190,6 +193,7 @@ class TransactionController {
    * @returns {Object} - Mensaje de éxito
    */
   static async getAllTransactionsFromAccount(req, res) {
+    logger.info(`Transacciones: `);
     const { userId } = req.params;
     
     if (!userId) {
@@ -238,6 +242,17 @@ class TransactionController {
         error: error.message 
       });
     }
+  }
+
+  static getCardOrgFromNumber(cardNumber) {
+    if (/^4/.test(cardNumber)) {
+      return 'Visa';
+    } else if (/^5[1-5]/.test(cardNumber)) {
+      return 'MasterCard';
+    } else if (/^3[47]/.test(cardNumber)) {
+      return 'AmericanExpress';
+    }
+    return null; 
   }
 }
 
