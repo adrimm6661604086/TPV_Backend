@@ -97,7 +97,8 @@ class UserController {
           message: "Email y password requeridas" });
       }
 
-      const user = await UserModel.findOne({ where: { email } });
+      const sanitizedEmail = email.replace(/\s+/g, '');
+      const user = await UserModel.findOne({ where: { email : sanitizedEmail } });
       if (!user) {
         logger.error('El usuario no existe');
         return res.status(404).json({ 
