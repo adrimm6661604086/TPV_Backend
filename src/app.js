@@ -19,7 +19,6 @@ const startServer = async () => {
     await connectDb();
 
     app.listen(PORT, '0.0.0.0', () => {
-      console.log(`Servidor corriendo en ${BACKEND_URL}:${PORT}`);
       logger.info(`Servidor corriendo en ${BACKEND_URL}:${PORT}`);
     });
   } catch (err) {

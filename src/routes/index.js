@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     res.json({ message: '¡Bienvenido a la API de TPVVirtual!' });
 });
 
-router.get('/pay', (req, res) => {
+router.get('/test', (req, res) => {
     res.json({ message: 'Estelita te quiero mucho!' });
 });
 
