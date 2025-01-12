@@ -22,7 +22,6 @@ const startServer = async () => {
       logger.info(`Servidor corriendo en ${BACKEND_URL}:${PORT}`);
     });
   } catch (err) {
-    console.error('Error al conectar con la base de datos:', err);
     logger.error('Error al conectar con la base de datos:', err);
     process.exit(1); 
   }
