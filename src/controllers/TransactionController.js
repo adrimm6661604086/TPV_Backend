@@ -42,7 +42,7 @@ class TransactionController {
       });
     }
 
-    const AID = getCardOrgFromNumber(creditCardNumber);
+    const AID = TransactionController.getCardOrgFromNumber(creditCardNumber);
 
     try {
       const bankAccount = await BankAccountModel.findOne({ where: { userId } });
@@ -73,6 +73,7 @@ class TransactionController {
       logger.info(`Respuesta de la API del banco: ${responseData.message}`);
 
       if (response.status === 200) {
+        logger.info('Tarjet de pago: **** ' + creditCardNumber.toString().slice(-4));
         const hashCreditCardNumber = await bcrypt.hash(creditCardNumber, 10);
         const hashCVC = await bcrypt.hash(cvc, 10);
         
@@ -80,7 +81,7 @@ class TransactionController {
           const transaction = await TransactionModel.createTransaction({
             bankAccountId: bankAccount.id,
             creditCardNumber: hashCreditCardNumber,
-            last4Digits: creditCardNumber.slice(-4),
+            last4Digits: creditCardNumber.toString().slice(-4),
             creditCardHolder,
             expirationDate,
             cvc: hashCVC,
@@ -90,6 +91,7 @@ class TransactionController {
             CardOrg: AID
           });
 
+          logger.info('Transacción creada con éxito: ' + transaction.id);
           return res.status(201).json({
             status: 201,
             message: 'Transacción creada con éxito',
@@ -218,7 +220,10 @@ class TransactionController {
       const bankAccountParsed = JSON.parse(bankAccount);
       logger.info(`Bank account ID: ${bankAccountParsed.id}`);
       
-      const transactions = await TransactionModel.findAll({ where: { bankAccountId: bankAccountParsed.id } });
+      const transactions = await TransactionModel.findAll({ 
+        where: { bankAccountId: bankAccountParsed.id }, 
+        order: [['transactionDate', 'DESC']] 
+      });
 
       if (!transactions) {
         logger.error('No hay transacciones');
