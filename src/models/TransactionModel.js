@@ -11,16 +11,22 @@ import { db } from '../db.js';
  */
 class TransactionModel extends Model {
     /**
-     * @param {string} id - UUID de la transacción.
-     * @param {string} userAccountId - ID de la cuenta de usuario asociada.
-     * @param {string} creditCardNumber - Número de la tarjeta de crédito.
-     * @param {'Visa' | 'MasterCard' | 'AmericanExpress'} creditCardHolder - Tipo de tarjeta.
+     * 
+     * @description Crea una transacción.
+     * 
+     * @param {string} bankAccountId - ID de la cuenta bancaria.
+     * @param {string} creditCardNumber - Número de tarjeta de crédito.
+     * @param {string} last4Digits - Últimos 4 dígitos de la tarjeta.
+     * @param {string} creditCardHolder - Nombre del titular de la tarjeta.
      * @param {Date} expirationDate - Fecha de expiración de la tarjeta.
-     * @param {string} cvc - Código CVC.
-     * @param {number} amount - Cantidad de la transacción.
-     * @param {Date} [transactionDate] - Fecha de la transacción.
+     * @param {string} cvc - Código de verificación de la tarjeta.
+     * @param {number} amount - Cantidad a pagar.
      * @param {'PAYMENT' | 'RETURN'} transactionType - Tipo de transacción.
      * @param {'BankSim' | 'BBVA' | 'Caixabank' | 'Santander'} bankEntity - Entidad bancaria.
+     * @param {'Visa' | 'MasterCard' | 'AmericanExpress'} CardOrg - Organización de la tarjeta.
+     * 
+     * @returns {Promise<TransactionModel>} - Transacción creada.
+     * @throws {Error} - Error de transacción.
      */
     static async createTransaction({ bankAccountId, creditCardNumber, last4Digits, creditCardHolder, expirationDate, cvc, amount, transactionType, bankEntity, CardOrg }) {
       const transaction = await this.create({
@@ -38,6 +44,24 @@ class TransactionModel extends Model {
       });
       return transaction;
     } 
+
+
+    /**
+     * @description Devuelve una transacción.
+     * 
+     * @param {string} transaction - Transacción a devolver.
+     * 
+     * @returns {Promise<TransactionModel>} - Transacción actual
+     * @throws {Error} - Error de actualización.     
+     */
+    static async returnTransaction(transaction) {
+      if (transaction.transactionType === 'PAYMENT') {
+        transaction.returned = true;
+      }
+      
+      await transaction.save();
+      return transaction;
+    }
   }
   
 TransactionModel.init(

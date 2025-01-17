@@ -64,7 +64,7 @@ class TransactionController {
           creditCardHolder: creditCardHolder,
           expirationDate: expirationDate,
           CVC: cvc,
-          IBANorig: bankAccount.IBAN,
+          IBANdst: bankAccount.IBAN,
           amount: amount
         }).toString()
       });
@@ -128,57 +128,102 @@ class TransactionController {
    * @returns {Object} - Mensaje de éxito o error, si se ha devuelto el dinero correctamente.
    */
   static async returnTransaction(req, res) {
-    const { creditCardNumber, CreditCardHolder,
-      expirationDate, cvc} = req.body;
+    const { creditCardNumber, creditCardHolder,
+      expirationDate, cvc, userId} = req.body;
     const { transactionId } = req.params;
-    const transaction = TransactionModel.findOne({ where: { id: transactionId } });
-
-    if (!transaction) {
-      logger.error('Transacción no encontrada');
-      return res.status(404).json({ 
-        status: 404,
-        message: 'Transacción no encontrada' 
-      });
-    }
-
-    if (transaction.creditCardNumber !== creditCardNumber ||
-      transaction.CreditCardHolder !== CreditCardHolder ||
-      transaction.expirationDate !== expirationDate ||
-      transaction.cvc !== cvc) {
-      logger.error('Datos de la tarjeta incorrectos');
-      return res.status(400).json({ 
-        status: 400,
-        message: 'Datos de la tarjeta incorrectos' 
-      });
-    }
-
-    if (transaction.transactionType === 'RETURN' || transaction.returned) {
-      logger.error('La transacción ya ha sido devuelta');
-      return res.status(400).json({ 
-        status: 400,
-        message: 'La transacción ya ha sido devuelta'
-      });
-    }
+    
 
     try {
-      const returnTransaction = TransactionModel.createTransaction({
-        userAccountId: transaction.userAccountId,
-        creditCardNumber: transaction.creditCardNumber,
-        CreditCardHolder: transaction.CreditCardHolder,
-        expirationDate: transaction.expirationDate,
-        cvc: transaction.cvc,
-        amount: transaction.amount,
+      const bankAccount = await BankAccountModel.findOne({ where: { userId } });
+      if (!bankAccount) {
+        logger.error('Cuenta bancaria no encontrada');
+        return res.status(404).json({
+          status: 404,
+          message: 'Cuenta bancaria no encontrada'
+        });
+      }
+
+      const transaction = await TransactionModel.findOne({
+        where: {
+          id: transactionId,
+          bankAccountId: bankAccount.id
+        }
+      });
+
+      if (!transaction) {
+        logger.error('Transacción no encontrada');
+        return res.status(404).json({ 
+          status: 404,
+          message: 'Transacción no encontrada' 
+        });
+      }
+
+      const isCreditCardNumberValid = await bcrypt.compare(creditCardNumber, transaction.creditCardNumber);
+      const isCreditCardHolderValid = transaction.creditCardHolder === creditCardHolder;
+      const isCvcValid = await bcrypt.compare(cvc, transaction.cvc);
+
+      logger.info(`Checks: ${isCreditCardNumberValid}, ${isCreditCardHolderValid} ${isCvcValid}`);
+
+      if (!isCreditCardNumberValid || !isCreditCardHolderValid || !isCvcValid) {
+        logger.error('Datos de la tarjeta incorrectos');
+        return res.status(400).json({ 
+          status: 400,
+          message: 'Datos de la tarjeta incorrectos' 
+        });
+      }
+
+      if (transaction.returned) {
+        logger.error('La transacción ya ha sido devuelta');
+        return res.status(400).json({ 
+          status: 400,
+          message: 'La transacción ya ha sido devuelta'
+        });
+      }
+      
+      const response = await fetch(`${BANK_API_URL}/return-payment`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          creditCardNumber: creditCardNumber,
+          creditCardHolder: creditCardHolder,
+          expirationDate: expirationDate,
+          CVC: cvc,
+          IBANorig: bankAccount.IBAN,
+          amount: transaction.amount
+        }).toString()
+      });
+
+      const responseData = await response.json();
+      logger.info(`Respuesta de la API del banco: ${responseData.message}`);
+
+      
+      const returnedTransaction = await TransactionModel.returnTransaction(transaction);
+
+      const returnTransaction = await TransactionModel.createTransaction({
+        bankAccountId: bankAccount.id,
+        creditCardNumber: creditCardNumber,
+        last4Digits: returnedTransaction.last4Digits,
+        creditCardHolder: returnedTransaction.creditCardHolder,
+        expirationDate: returnedTransaction.expirationDate,
+        cvc: cvc,
+        amount: returnedTransaction.amount,
         transactionType: 'RETURN',
-        bankEntity: transaction.bankEntity,
+        bankEntity: 'BankSim',
+        CardOrg: returnedTransaction.CardOrg,
+        returned: true,
       });
 
       logger.info('Transacción devuelta con éxito');
       return res.status(201).json({
         status: 201,
         message: 'Transacción devuelta con éxito',
-        returnTransaction,
+        transaction: returnTransaction,
       });
-  
+
+      
+          
     } catch(error) {
       logger.error(`Error al devolver la transacción: ${error.message}`);
       return res.status(500).json({ 
@@ -195,7 +240,6 @@ class TransactionController {
    * @returns {Object} - Mensaje de éxito
    */
   static async getAllTransactionsFromAccount(req, res) {
-    logger.info(`Transacciones: `);
     const { userId } = req.params;
     
     if (!userId) {
